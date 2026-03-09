@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script></script>
+</head>
+<body>
+    <h1>DOM Manipulation Test</h1>
+    <button id="toggleButton">Click me to</button>
+    <p id="toggleText" style="display: none;">This text is toggled!</p>
+
+</body>
+    <script>
+        const button = document.getElementById('toggleButton');
+        const text = document.getElementById('toggleText');
+        
+
+        button.addEventListener('click', () => {
+            if (text.style.display === 'none') {
+                text.style.display = 'block';
+                // console.log("Text is appear")
+                text.innerText= "Congratulation you are a Gay"
+                button.innerText= "Click me to become Straight"
+                document.body.style.backgroundColor="green"
+                document.body.style.color="red"
+                // console.log(text.innerText)
+            } else {
+                text.style.display = 'none';
+                button.innerText= ""
+                button.innerText="Click me  if you are gay"
+                document.body.style.backgroundColor="white"
+                document.body.style.color="black"
+                // console.log("good")
+            }
+        });
+    </script>
+</html>
